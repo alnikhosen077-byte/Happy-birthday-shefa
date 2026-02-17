@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>শুভ জন্মদিন শেফা!🩷</title>
+    <title>শুভ জন্মদিন শেফা!</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <style>
         * { box-sizing: border-box; }
@@ -88,4 +88,50 @@
         </audio>
 
     <div class="container">
-        <img src="
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXNidndpZzRreXRxZzRreHpxZzRreHpxZzRreHpxZzRreHpxJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41JRsM9n11G717MY/giphy.gif" class="animated-sticker" alt="Cake">
+        
+        <h1>শুভ জন্মদিন, শেফা! 🎂</h1>
+        <p class="sub-title">প্রিয় ছোট বোন ও বন্ধু ✨</p>
+        
+        <div class="wish-box">
+            "আজ ১৮ই ফেব্রুয়ারি, তোমার দিন! ঈশ্বর তোমার জীবনকে রঙিন এনিমেশনের মতো সুন্দর আর আনন্দময় করে তুলুন। সব সময় হাসিখুশি থেকো শেফা!" 🎈
+        </div>
+        
+        <button onclick="playEverything()">ম্যাজিক দেখো এখানে! ✨</button>
+    </div>
+
+    <script>
+        function playEverything() {
+            // গান প্লে (যদি লিংক সঠিক থাকে)
+            var audio = document.getElementById("bgMusic");
+            audio.play().catch(e => console.log("Audio play failed"));
+
+            // ফুল স্ক্রিন কনফেটি
+            var end = Date.now() + (3 * 1000);
+            (function frame() {
+                confetti({
+                    particleCount: 3,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#ff4d6d', '#ff9a9e']
+                });
+                confetti({
+                    particleCount: 3,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#ff4d6d', '#ff9a9e']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+
+            document.querySelector('button').innerText = "জন্মদিন সফল হোক! 🎉";
+            document.querySelector('button').style.background = "#28a745";
+        }
+    </script>
+</body>
+</html>
